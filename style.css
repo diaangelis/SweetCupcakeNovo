@@ -1,0 +1,250 @@
+
+/* Página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f8f1e8;
+    color: #3b241b;
+}
+
+
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    background: #5a3828;
+    color: white;
+    padding: 22px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+header p {
+    font-size: 15px;
+    margin: 6px 0 12px;
+}
+
+.categorias {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.categorias span {
+    background: white;
+    color: #5a3828;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+
+
+/* Conteúdo */
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Produtos */
+
+section {
+    display: flex;
+    gap: 25px;
+}
+
+article {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 4px 12px #00000015;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px #00000020;
+}
+
+article h3 {
+    color: #5a3828;
+    margin-top: 18px;
+}
+
+article p {
+    color: #6b5145;
+    line-height: 1.5;
+}
+
+article strong {
+    display: block;
+    font-size: 22px;
+    color: #5a3828;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* Imagens dos cupcakes */
+article img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+
+
+/* Imagens */
+article img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Botões */
+button {
+    background: #8b5e3c;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #5a3828;
+}
+
+/* Separador */
+hr {
+    margin: 40px 0;
+    border: none;
+    border-top: 1px solid #d8c5b5;
+}
+
+
+
+/* Carrinho */
+#carrinho {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #00000015;
+}
+
+#carrinho p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #eee;
+    padding: 14px 0;
+    margin: 0;
+}
+
+#carrinho p:last-child {
+    border-bottom: none;
+}
+
+/* Botões do carrinho */
+#carrinho button {
+    border: none;
+    border-radius: 7px;
+    padding: 8px 12px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#carrinho button:hover {
+    opacity: 0.85;
+}
+
+/* Botões + e - */
+#carrinho button[onclick^="diminuirQuantidade"],
+#carrinho button[onclick^="aumentarQuantidade"] {
+    background: #8b5e3c;
+    min-width: 36px;
+}
+
+/* Botão Remover */
+#carrinho button[onclick^="removerCarrinho"] {
+    background: #a65d4a;
+}
+
+/* Total */
+#total {
+    text-align: right;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+
+
+/* Telemóvel */
+@media (max-width: 700px) {
+    section {
+        flex-direction: column;
+    }
+
+    #carrinho p {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #total {
+        text-align: left;
+    }
+}
+
+
+.categorias {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.categorias span {
+    background: white;
+    color: #5a3828;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+/* Botão Finalizar compra */
+main > button[onclick="finalizarCompra()"] {
+    display: block;
+    margin: 25px auto 10px;
+    background: #8b5e3c;
+    color: white;
+    border: none;
+    padding: 13px 28px;
+    border-radius: 9px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+main > button[onclick="finalizarCompra()"]:hover {
+    background: #5a3828;
+}
+
+
+
